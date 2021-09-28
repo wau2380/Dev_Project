@@ -1,7 +1,8 @@
+
 <template>
   <body>
     <div class="row1">
-      <div  class="search">
+      <div class="search">
         <input type="text" placeholder="검색어 입력">
         <button>검색</button>
       </div>
@@ -15,19 +16,26 @@
         <li><a class="menus" href="#">logout</a></li>
        </ul>
     </div>
-   <div class="row3">
-      
-   </div>
+
+    <div class="row3">
+      <main-page></main-page>
+    </div>
   </body>
 </template>
 
 <script>
+  import MainPage from "./components/MainPage"
 
-export default {
-  name:"DEV",
-  components: {
+  export default {
+    name:"DEV",
+    components: {
+      MainPage
+    },
+    data() {
+    },
+    methods: {
+    }
   }
-}
 </script>
 
 <style>
@@ -36,8 +44,6 @@ body{
   height: 100%;
   margin-left:0;
   margin-right:0;
-
-
 }
 
 .row1{
@@ -46,7 +52,6 @@ body{
   padding-bottom:5px;
   border-bottom:3px solid;
   justify-content: center;
-
 }
 
 .search{
@@ -73,19 +78,17 @@ button{
   height:100%;
   border:0px;
   outline:none;
-  float:right;
-  
- 
+  /* float:right; */
 }
 
 .row2{
-
   border-bottom:3px solid;
   display:flex;
   justify-content: space-between;
   align-items: center;
   background-color:rgb(240, 179, 157);
 }
+
 
 @media screen and (max-width:768){
   .row2{
@@ -96,9 +99,7 @@ button{
   }
   .li{
       padding:0px 30px;
-
   }
-
 }
 
 .top-menu{
@@ -109,7 +110,6 @@ button{
   vertical-align: middle;    
   text-align: center;
   justify-content: center;
- 
 }
 ul{
   list-style-type: none; 
@@ -118,7 +118,6 @@ ul{
   margin:5px auto;
   padding:0;
 }
-
 
 li{
   text-decoration:none;
@@ -129,6 +128,4 @@ li{
   font-weight: bold;
   display:inline;
 }
-
-
 </style>
