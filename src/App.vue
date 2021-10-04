@@ -1,21 +1,23 @@
 <template>
-  <!-- <login_page /> -->
-  <!-- <main_page/> -->
-  <join_page />
+  <!-- <login-page /> -->
+
+  <main-page />
+
+  <!-- <join-page /> -->
 </template>
 
 <script>
-// import main_page from "./components/main_page/main_page.vue";
+import MainPage from "./components/main-page/main-page.vue";
 
-// import login_page from "./components/login_page/login_page.vue";
-import join_page from "./components/join_page/join_page.vue";
+// import LoginPage from "./components/login-page/login-page.vue";
+// import JoinPage from "./components/join-page/join-page.vue";
 
 export default {
   name: "App",
   components: {
-    join_page,
-    // main_page,
-    // login_page,
+    // JoinPage,
+    MainPage,
+    // LoginPage,
   },
 };
 </script>
