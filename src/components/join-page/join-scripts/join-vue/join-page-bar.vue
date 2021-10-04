@@ -1,10 +1,10 @@
 <template>
   <div class="row2">
     <ul class="top-menu">
-      <li><a class="menus">Home</a></li>
-      <li><a class="menus">Company</a></li>
-      <li><a class="menus">Mypage</a></li>
-      <li><a class="menus">Logout</a></li>
+      <li class="menu_li"><a class="menus" href="">Home</a></li>
+      <li class="menu_li"><a class="menus" href="">Company</a></li>
+      <li class="menu_li"><a class="menus" href="">Mypage</a></li>
+      <li class="menu_li"><a class="menus" href="">Logout</a></li>
     </ul>
   </div>
 </template>

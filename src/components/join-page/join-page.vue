@@ -6,7 +6,7 @@
     <!-- <join-page-cardnews -->
   </body>
 </template>
-<script src="./join-scripts/join-page.js"></script>
+
 <style>
 body {
   width: 100%;
@@ -15,3 +15,5 @@ body {
   margin-right: 0;
 }
 </style>
+
+<script src="./join-scripts/join-page.js"></script>

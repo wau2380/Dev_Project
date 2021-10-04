@@ -1,6 +1,6 @@
 <template>
   <body>
-    <login-page-search>hello</login-page-search>
+    <login-page-search></login-page-search>
     <login-page-bar> </login-page-bar>
     <!-- <login-page-card-news> </login-page-card-news> -->
     <login-page-signin> </login-page-signin>
