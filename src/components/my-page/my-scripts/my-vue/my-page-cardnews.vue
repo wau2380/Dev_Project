@@ -4,25 +4,9 @@
       <div class="card card-0"></div>
       <div class="card card-1"></div>
       <div class="card card-2"></div>
-
-      <div class="card card-3"></div>
-      <div class="card card-4"></div>
-      <div class="card card-5"></div>
-    </div>
-  </div>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <div id="Card_News">
-    <div class="Card_Container">
       <div class="card card-0"></div>
       <div class="card card-1"></div>
       <div class="card card-2"></div>
-      <div class="card card-3"></div>
-      <div class="card card-4"></div>
-      <div class="card card-5"></div>
     </div>
   </div>
 </template>
@@ -30,7 +14,7 @@
 <style>
 #Card_News {
   height: 100%;
-  background: whitesmoke;
+  background: white;
   text-align: center;
   display: flex;
   justify-content: space-evenly;
@@ -41,9 +25,9 @@
   background: #fff;
   border-radius: 4px;
   display: inline-block;
-  height: 300px;
+  height: 400px;
   margin: 30px;
-  width: 300px;
+  width: 400px;
   border: 1px solid;
 }
 .card-1 {

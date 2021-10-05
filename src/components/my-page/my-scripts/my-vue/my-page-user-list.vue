@@ -1,12 +1,12 @@
 <template>
-  <div class="user_company_container">
-    <p class="title">구독기업</p>
-    <div class="user_company_list">
+  <div class="user_mypage_container">
+    <p class="title">구독한 기업</p>
+    <div class="user_mypage_list">
       <button class="prev_button" v-on:click="moveBar">이전</button>
-      <nav id="company_list_bar">
-        <ul class="companys">
-          <li v-for="(company, i) in UserCompanys" v-bind:key="i">
-            <img :src="company.logo" alt="" />
+      <nav id="mypage_list_bar">
+        <ul class="mypages">
+          <li v-for="(mypage, i) in UserMyPage" v-bind:key="i">
+            <img :src="mypage.logo" alt="" />
           </li>
         </ul>
       </nav>
@@ -18,26 +18,26 @@
 <script>
 export default {
   props: {
-    UserCompanys: Object,
+    UserMyPage: Object,
   },
   methods: {
     moveBar(event) {
       let btnClass = event.target.className;
       let nextButton = "next_button";
-      let companys = document.querySelector(".companys");
+      let mypages = document.querySelector(".mypages");
 
       if (btnClass === nextButton) {
-        companys.scrollBy(210, 0);
+        mypages.scrollBy(210, 0);
         // 105당 한칸
       } else {
-        companys.scrollBy(-210, 0);
+        mypages.scrollBy(-210, 0);
       }
     },
   },
 };
 </script>
 <style>
-.user_company_container {
+.user_mypage_container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -45,33 +45,33 @@ export default {
   width: 100%;
   border-bottom: 1px solid black;
 }
-.user_company_container .title {
+.user_mypage_container .title {
   width: 10%;
   padding-left: 10%;
 
   font-size: 18px;
   font-weight: bold;
 }
-.user_company_list {
+.user_mypage_list {
   display: flex;
   justify-content: center;
   align-items: center;
 
   max-width: 60%;
 }
-.user_company_list button {
+.user_mypage_list button {
   padding: 0;
   height: 30px;
   min-width: 40px;
 
   border: 1px solid black;
 }
-#company_list_bar {
+#mypage_list_bar {
   display: flex;
   width: 100%;
   margin: 5px;
 }
-#company_list_bar .companys {
+#mypage_list_bar .mypages {
   height: 100px;
   background: white;
   background-color: white;
@@ -90,10 +90,10 @@ export default {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-#company_list_bar .companys::-webkit-scrollbar {
+#mypage_list_bar .mypages::-webkit-scrollbar {
   display: none;
 }
-#company_list_bar li {
+#mypage_list_bar li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +101,7 @@ export default {
   padding: 0;
   margin: 10px;
 }
-#company_list_bar li img {
+#mypage_list_bar li img {
   width: 85px;
   height: 85px;
   border: 1px solid;

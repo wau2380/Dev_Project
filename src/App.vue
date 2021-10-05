@@ -1,15 +1,17 @@
 <template>
   <!-- <login-page /> -->
-  <company-page />
+  <!-- <company-page /> -->
   <!-- <main-page /> -->
+  <my-page />
   <!-- <join-page /> -->
 </template>
 
 <script>
 // import MainPage from "./components/main-page/main-page.vue";
-import CompanyPage from "./components/company-page/company-page.vue";
+// import CompanyPage from "./components/company-page/company-page.vue";
 // import LoginPage from "./components/login-page/login-page.vue";
 // import JoinPage from "./components/join-page/join-page.vue";
+import MyPage from "./components/my-page/my-page.vue";
 
 export default {
   name: "App",
@@ -17,7 +19,8 @@ export default {
     // JoinPage,
     // MainPage,
     // LoginPage,
-    CompanyPage,
+    // CompanyPage,
+    MyPage,
   },
 };
 </script>
