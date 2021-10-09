@@ -16,4 +16,4 @@ body {
 }
 </style>
 
-<script src="./my-scripts/my-page.js"></script>
+<script src="./my-page.js"></script>

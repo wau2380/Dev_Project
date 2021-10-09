@@ -1,7 +1,7 @@
-import CompanyPageBar from './company-vue/company-page-bar.vue'
-import CompanyPageSearch from './company-vue/company-page-search.vue'
-import CompanyPageUserList from './company-vue/company-page-user-list.vue'
-import CompanyPageTotalList from './company-vue/company-page-total-list.vue'
+import CompanyPageBar from './components/company-page-bar.vue'
+import CompanyPageSearch from './components/company-page-search.vue'
+import CompanyPageUserList from './components/company-page-user-list.vue'
+import CompanyPageTotalList from './components/company-page-total-list.vue'
 
 export default {
   components: {

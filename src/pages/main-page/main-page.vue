@@ -15,4 +15,4 @@ body {
 }
 </style>
 
-<script src="./main-scripts/main-page.js"></script>
+<script src="./main-page.js"></script>

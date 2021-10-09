@@ -6,7 +6,7 @@
     <login-page-signin> </login-page-signin>
   </body>
 </template>
-<script src="./login-scripts/login-page.js"></script>
+<script src="./login-page.js"></script>
 <!--<style src="./login-scripts/login-styles/login-page.css"></style>
 -->
 <style>

@@ -1,7 +1,7 @@
-import MyPageSearch from "./my-vue/my-page-search.vue";
-import MyPageBar from "./my-vue/my-page-bar.vue";
-import MyPageCardnews from "./my-vue/my-page-cardnews.vue";
-import MyPageLogo from "./my-vue/my-page-user-list.vue";
+import MyPageSearch from "./components/my-page-search.vue";
+import MyPageBar from "./components/my-page-bar.vue";
+import MyPageCardnews from "./components/my-page-cardnews.vue";
+import MyPageLogo from "./components/my-page-user-list.vue";
 
 export default {
   components: {

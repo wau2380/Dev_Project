@@ -16,4 +16,4 @@ body {
 }
 </style>
 
-<script src="./join-scripts/join-page.js"></script>
+<script src="./join-page.js"></script>

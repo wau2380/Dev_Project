@@ -9,7 +9,7 @@
   </body>
 </template>
 
-<script src="./company-scripts/company.js"></script>
+<script src="./company-page.js"></script>
 
 <style>
 body {
