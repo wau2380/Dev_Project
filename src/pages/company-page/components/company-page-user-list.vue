@@ -54,7 +54,6 @@ export default {
 }
 .user_company_list {
   display: flex;
-  justify-content: center;
   align-items: center;
 
   max-width: 60%;
