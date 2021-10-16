@@ -25,7 +25,6 @@ export default {
       let btnClass = event.target.className;
       let nextButton = "next_button";
       let mypages = document.querySelector(".mypages");
-
       if (btnClass === nextButton) {
         mypages.scrollBy(210, 0);
         // 105당 한칸
@@ -48,22 +47,18 @@ export default {
 .user_mypage_container .title {
   width: 10%;
   padding-left: 10%;
-
   font-size: 18px;
   font-weight: bold;
 }
 .user_mypage_list {
   display: flex;
-  justify-content: center;
   align-items: center;
-
   max-width: 60%;
 }
 .user_mypage_list button {
   padding: 0;
   height: 30px;
   min-width: 40px;
-
   border: 1px solid black;
 }
 #mypage_list_bar {
@@ -79,12 +74,9 @@ export default {
   justify-content: start;
   align-items: center;
   border: 1px solid var(--border-line-gary);
-
   border-radius: 20px;
-
   padding: 0 8px;
   position: relative;
-
   overflow: scroll;
   overflow-y: none;
   -ms-overflow-style: none;
@@ -97,7 +89,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding: 0;
   margin: 10px;
 }
@@ -105,7 +96,6 @@ export default {
   width: 85px;
   height: 85px;
   border: 1px solid;
-
   border-radius: 75px;
 }
 </style>

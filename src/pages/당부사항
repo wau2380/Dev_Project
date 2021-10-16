@@ -3,9 +3,3 @@ ex) "./main_styles/main_page_css.css" 꼭 "./" 붙여주세요
 위와 같은 오류가 아니고 다른 오류가 일어났을 때는
 "npm install --save" 터미널에 해주세요
 재부팅도 해주시면 좋아요!
-
-디렉토리가 수평적인 관계에 놓이면 불러오기가 안되서
-main_scripts 파일에 전부 하위 디렉토리로 만들었습니다.
-그 부분 참고해주세요.
-
-그리고 지금 join,login 페이지의 카드뉴스 레이아웃과 css는 각각 signin, signup에 합쳐져있어요.

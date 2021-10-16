@@ -1,8 +1,8 @@
 <template>
   <div class="row3">
-    <div class="Card_News">
-      <div class="Card_Container">
-        <div class="card card-0"></div>
+    <div class="Join_Card">
+      <div class="Join_Card__Cardnews">
+        <div class="Join_Card__Cardnews__card card-0"></div>
       </div>
     </div>
     <div class="join">
@@ -45,7 +45,7 @@
   display: flex;
   margin: 0 15%;
 }
-.Card_News {
+.Join_Card {
   height: 80vh;
   text-align: center;
   display: flex;
@@ -53,7 +53,7 @@
   align-items: center;
   flex: 1;
 }
-.card {
+.Join_Card__Cardnews__card {
   background: #fff;
   border-radius: 4px;
   display: inline-block;
@@ -63,14 +63,11 @@
   border: 1px solid;
   flex-shrink: 1;
 }
-.card-1 {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
+
 .card-0:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.Card_Container {
+.Join_Card_Cardnews {
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
 }
