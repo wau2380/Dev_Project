@@ -1,5 +1,5 @@
 <template>
-  <div id="Card_News">
+  <div class="Card_News">
     <div class="Card_Container">
       <div class="card card-0"></div>
       <div class="card card-1"></div>
@@ -15,7 +15,7 @@
   <br />
   <br />
   <br />
-  <div id="Card_News">
+  <div class="Card_News">
     <div class="Card_Container">
       <div class="card card-0"></div>
       <div class="card card-1"></div>
@@ -28,7 +28,7 @@
 </template>
 
 <style>
-#Card_News {
+.Card_News {
   height: 100%;
   background: whitesmoke;
   text-align: center;

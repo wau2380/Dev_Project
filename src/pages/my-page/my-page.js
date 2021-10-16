@@ -4,6 +4,7 @@ import MyPageCardnews from "./components/my-page-cardnews.vue";
 import MyPageLogo from "./components/my-page-user-list.vue";
 
 export default {
+  name: "MyPage",
   components: {
     MyPageSearch,
     MyPageBar,

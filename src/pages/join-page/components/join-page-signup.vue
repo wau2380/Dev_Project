@@ -1,6 +1,6 @@
 <template>
   <div class="row3">
-    <div id="Card_News">
+    <div class="Card_News">
       <div class="Card_Container">
         <div class="card card-0"></div>
       </div>
@@ -45,7 +45,7 @@
   display: flex;
   margin: 0 15%;
 }
-#Card_News {
+.Card_News {
   height: 80vh;
   text-align: center;
   display: flex;
