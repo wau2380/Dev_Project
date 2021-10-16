@@ -15,6 +15,8 @@
   justify-content: center;
 }
 .search {
+  position: fixed;
+  left: 50%;
   height: 40px;
   width: 700px;
   border: 5px solid white;
