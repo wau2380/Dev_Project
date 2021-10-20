@@ -1,19 +1,22 @@
 <template>
-  <body>
-    <login-page-search></login-page-search>
-    <login-page-bar> </login-page-bar>
-    <!-- <login-page-card-news> </login-page-card-news> -->
+  <div id="layout">
+    <login-page-header></login-page-header>
     <login-page-signin> </login-page-signin>
-  </body>
+  </div>
 </template>
 <script src="./login-page.js"></script>
-<!--<style src="./login-scripts/login-styles/login-page.css"></style>
--->
 <style>
 body {
   width: 100%;
   height: 100%;
   margin-left: 0;
   margin-right: 0;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
 }
 </style>

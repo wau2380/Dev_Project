@@ -1,17 +1,14 @@
-import MyPageSearch from "./components/my-page-search.vue";
-import MyPageBar from "./components/my-page-bar.vue";
+import MyPageHeader from "./components/my-page-header.vue";
 import MyPageCardnews from "./components/my-page-cardnews.vue";
 import MyPageLogo from "./components/my-page-user-list.vue";
 
 export default {
   name: "MyPage",
   components: {
-    MyPageSearch,
-    MyPageBar,
+    MyPageHeader,
     MyPageLogo,
     MyPageCardnews,
   },
-
   data() {
     return {
       UserMyPage: [

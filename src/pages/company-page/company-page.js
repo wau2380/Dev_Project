@@ -1,13 +1,11 @@
-import CompanyPageBar from "./components/company-page-bar.vue";
-import CompanyPageSearch from "./components/company-page-search.vue";
+import CompanyPageHeader from "./components/company-page-header.vue";
 import CompanyPageUserList from "./components/company-page-user-list.vue";
 import CompanyPageTotalList from "./components/company-page-total-list.vue";
 
 export default {
   name: "Company",
   components: {
-    CompanyPageSearch,
-    CompanyPageBar,
+    CompanyPageHeader,
     CompanyPageUserList,
     CompanyPageTotalList,
   },

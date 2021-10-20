@@ -1,7 +1,10 @@
 <template>
-  <div class="user_company_container">
-    <p class="title">구독기업</p>
-    <div class="user_company_list">
+<div class="wrap_company_nav_container">
+  <div class="company_nav_container">
+    <div class="company_nav_title">
+      <p class="title_text">구독기업</p>        
+    </div>
+    <div class="company_nav_list">
       <button class="prev_button" v-on:click="moveBar">이전</button>
       <nav id="company_list_bar">
         <ul class="companys">
@@ -13,6 +16,7 @@
       <button class="next_button" v-on:click="moveBar">다음</button>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -37,57 +41,72 @@ export default {
 };
 </script>
 <style>
-.user_company_container {
+
+.wrap_company_nav_container {
+  background-color: white;
+  width: 100%;
+  height: 120px;
+
+  position: fixed;
+  top: 70px;
+  z-index: 1000;
+}
+.company_nav_container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  height: 120px;
-  width: 100%;
-  border-bottom: 1px solid black;
+  
+  height: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
-.user_company_container .title {
-  width: 10%;
-  padding-left: 10%;
-
-  font-size: 18px;
+.company_nav_container .company_nav_title {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.company_nav_container .company_nav_title .title_text {
+  padding: 0 50px;
+  font-size: 1.1em;
   font-weight: bold;
 }
-.user_company_list {
+.company_nav_container .company_nav_list {
   display: flex;
+  height: 100%;
   align-items: center;
-
-  max-width: 60%;
+  max-width: 80%;
+  margin-right: 100px;
 }
-.user_company_list button {
+.company_nav_container .company_nav_list::-webkit-scrollbar {
+  display: none;
+}
+.company_nav_container .company_nav_list button {
   padding: 0;
   height: 30px;
-  min-width: 40px;
+  min-width: 30px;
+  margin: 20px;
 
   border: 1px solid black;
 }
 #company_list_bar {
   display: flex;
-  width: 100%;
+  max-width: 83%;
+  height: 100%;
   margin: 5px;
 }
 #company_list_bar .companys {
-  height: 100px;
-  background: white;
   background-color: white;
   display: flex;
-  justify-content: start;
   align-items: center;
+  height: 100%;
+  width: 100%;
+
   border: 1px solid var(--border-line-gary);
-
   border-radius: 20px;
-
+  margin: 0;
   padding: 0 8px;
   position: relative;
 
   overflow: scroll;
-  overflow-y: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 #company_list_bar .companys::-webkit-scrollbar {
   display: none;

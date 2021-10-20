@@ -1,18 +1,22 @@
 <template>
-  <div class="user_mypage_container">
-    <p class="title">구독한 기업</p>
-    <div class="user_mypage_list">
+<div class="wrap_mypage_nav_container">
+  <div class="mypage_nav_container">
+    <div class="mypage_nav_title">
+      <p class="title_text">구독기업</p>        
+    </div>
+    <div class="mypage_nav_list">
       <button class="prev_button" v-on:click="moveBar">이전</button>
       <nav id="mypage_list_bar">
-        <ul class="mypages">
-          <li v-for="(mypage, i) in UserMyPage" v-bind:key="i">
-            <img :src="mypage.logo" alt="" />
+        <ul class="companys">
+          <li v-for="(company, i) in UserMyPage" v-bind:key="i">
+            <img :src="company.logo" alt="" />
           </li>
         </ul>
       </nav>
       <button class="next_button" v-on:click="moveBar">다음</button>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -36,59 +40,81 @@ export default {
 };
 </script>
 <style>
-.user_mypage_container {
+
+.wrap_mypage_nav_container {
+  background-color: white;
+  width: 100%;
+  height: 120px;
+
+  position: fixed;
+  top: 70px;
+  z-index: 1000;
+}
+.mypage_nav_container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  height: 120px;
-  width: 100%;
-  border-bottom: 1px solid black;
+  
+  height: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
-.user_mypage_container .title {
-  width: 10%;
-  padding-left: 10%;
-  font-size: 18px;
+.mypage_nav_container .mypage_nav_title {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.mypage_nav_container .mypage_nav_title .title_text {
+  padding: 0 50px;
+  font-size: 1.1em;
   font-weight: bold;
 }
-.user_mypage_list {
+.mypage_nav_container .mypage_nav_list {
   display: flex;
+  height: 100%;
   align-items: center;
-  max-width: 60%;
+  max-width: 80%;
+  margin-right: 100px;
 }
-.user_mypage_list button {
+.mypage_nav_container .mypage_nav_list::-webkit-scrollbar {
+  display: none;
+}
+.mypage_nav_container .mypage_nav_list button {
   padding: 0;
   height: 30px;
-  min-width: 40px;
+  min-width: 30px;
+  margin: 20px;
+
   border: 1px solid black;
 }
 #mypage_list_bar {
   display: flex;
-  width: 100%;
+  max-width: 83%;
+  height: 100%;
   margin: 5px;
 }
-#mypage_list_bar .mypages {
-  height: 100px;
-  background: white;
+#mypage_list_bar .companys {
   background-color: white;
   display: flex;
-  justify-content: start;
   align-items: center;
+  height: 100%;
+  width: 100%;
+
   border: 1px solid var(--border-line-gary);
   border-radius: 20px;
+  margin: 0;
   padding: 0 8px;
   position: relative;
+
   overflow: scroll;
-  overflow-y: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
-#mypage_list_bar .mypages::-webkit-scrollbar {
+#mypage_list_bar .companys::-webkit-scrollbar {
   display: none;
 }
 #mypage_list_bar li {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   padding: 0;
   margin: 10px;
 }
@@ -96,6 +122,7 @@ export default {
   width: 85px;
   height: 85px;
   border: 1px solid;
+
   border-radius: 75px;
 }
 </style>
