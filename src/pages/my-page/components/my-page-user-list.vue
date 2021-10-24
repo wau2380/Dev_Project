@@ -25,10 +25,13 @@ export default {
     UserMyPage: Object,
   },
   methods: {
+    // 구독 리스트의 스크롤바의 x 축을 이동시키는 함수
     moveBar(event) {
       let btnClass = event.target.className;
       let nextButton = "next_button";
-      let mypages = document.querySelector(".mypages");
+      let mypages = document.querySelector(".companys");
+
+      console.log(mypages)
       if (btnClass === nextButton) {
         mypages.scrollBy(210, 0);
         // 105당 한칸
@@ -36,11 +39,13 @@ export default {
         mypages.scrollBy(-210, 0);
       }
     },
+    // 스크롤 이벤트 발생시 nav의 위치을 변경시키는 함수
+    
   },
 };
 </script>
-<style>
 
+<style>
 .wrap_mypage_nav_container {
   background-color: white;
   width: 100%;
@@ -49,6 +54,10 @@ export default {
   position: fixed;
   top: 70px;
   z-index: 1000;
+  transition-duration: 0.5s;
+}
+.nav_none {
+  top: 0px;
 }
 .mypage_nav_container {
   display: flex;

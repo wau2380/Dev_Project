@@ -33,10 +33,18 @@
     
     border: 0;
     z-index: 1000;
+    transition-duration: 0.5s;
+  }
+  .header_none {
+    top: -70px;
   }
   .row1 a {
     font-weight: bold;
+    color: #4e5968;;
     padding: 12px 10px;
+  }
+  .row1 a:hover {
+    color: black;
   }
   .row1 .wrap_header {
     display: flex;
