@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  overflow: scroll;
+  margin-top: 100px;
 }
 .Main_Card__Cardnews__card {
   background: #fff;

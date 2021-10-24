@@ -58,21 +58,24 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1000px;
+    height: 100%;
 
-    overflow: scroll;
+    margin-top: 500px;
+    max-width: 1300px;
+    margin: 200px auto;
   }
   .total_company_container .title {
     font-size: 35px;
     font-weight: bold;
 
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
   .total_company_container .companys {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 90%;
+    justify-content: center;
+    width: 100%;
   }
   .total_company_container .companys li {
     width: auto;

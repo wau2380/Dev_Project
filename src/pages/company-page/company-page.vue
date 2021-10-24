@@ -1,12 +1,9 @@
 <template>
-  <body>
-    <company-page-search />
-    <company-page-bar />
-    <company-page-user-list
-      :UserCompanys="UserCompanys"
-    ></company-page-user-list>
+  <div id="layout">
+    <company-page-header />
+    <company-page-user-list :UserCompanys="UserCompanys"></company-page-user-list>
     <company-page-total-list :companys="companys"></company-page-total-list>
-  </body>
+  </div>
 </template>
 
 <script src="./company-page.js"></script>
@@ -17,5 +14,12 @@ body {
   height: 100%;
   margin-left: 0;
   margin-right: 0;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
 }
 </style>

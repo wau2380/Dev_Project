@@ -1,10 +1,9 @@
 <template>
-  <body>
-    <my-page-search> </my-page-search>
-    <my-page-bar> </my-page-bar>
+  <div id="layout">
+    <my-page-header> </my-page-header>
     <my-page-logo :UserMyPage="UserMyPage"></my-page-logo>
     <my-page-cardnews> </my-page-cardnews>
-  </body>
+  </div>
 </template>
 
 <style>
@@ -14,6 +13,13 @@ body {
   margin-left: 0;
   margin-right: 0;
 }
+body a {
+  text-decoration: none;
+  color: black;
+}
+/* li {
+  list-style: none;
+} */
 </style>
 
 <script src="./my-page.js"></script>

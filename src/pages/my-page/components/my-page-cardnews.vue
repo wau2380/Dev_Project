@@ -17,10 +17,16 @@
   height: 100%;
   background: white;
   text-align: center;
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  overflow: scroll;
+
+  /* overflow: scroll; */
+
+     margin-top: 250px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .My_Card__Cardnews__card {
   background: #fff;

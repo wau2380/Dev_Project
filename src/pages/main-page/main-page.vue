@@ -1,9 +1,8 @@
 <template>
-  <body>
-    <main-page-search> </main-page-search>
-    <main-page-bar> </main-page-bar>
+  <div id="layout">
+    <main-page-header> </main-page-header>
     <main-page-cardnews> </main-page-cardnews>
-  </body>
+  </div>
 </template>
 
 <style>
@@ -12,6 +11,13 @@ body {
   height: 100%;
   margin-left: 0;
   margin-right: 0;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
 }
 </style>
 
