@@ -50,6 +50,10 @@ export default {
   position: fixed;
   top: 70px;
   z-index: 1000;
+  transition-duration: 0.5s;
+}
+.nav_none {
+  top: 0px;
 }
 .company_nav_container {
   display: flex;

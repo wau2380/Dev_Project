@@ -27,6 +27,7 @@
     width: 100%;
     height: 70px;
     background-color: white;
+    transition-duration: 0.5s;
 
     top: 0;
     left: 0;
@@ -35,17 +36,17 @@
     border: 0;
     z-index: 1000;
   }
+  .header_none {
+    top: -70px;
+  }
   .row1 a {
     font-weight: bold;
+    color: #4e5968;;
     padding: 12px 10px;
   }
-  /* .row1 button {
-    width: 50px;
-    height: 100%;
-    border: 0px;
-    outline: none;
-    float: right;
-  } */
+  .row1 a:hover {
+    color: black;
+  }
   .row1 .wrap_header {
     display: flex;
     align-items: center;
@@ -101,3 +102,4 @@
     margin-right: 15px;
   }
 </style>
+

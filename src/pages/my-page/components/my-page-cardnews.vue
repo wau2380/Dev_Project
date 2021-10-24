@@ -24,9 +24,9 @@
 
   /* overflow: scroll; */
 
-     margin-top: 250px;
-    margin-left: 5%;
-    margin-right: 5%;
+  margin-top: 250px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .My_Card__Cardnews__card {
   background: #fff;
