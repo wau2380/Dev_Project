@@ -67,14 +67,12 @@ export default {
   .total_company_container .title {
     font-size: 35px;
     font-weight: bold;
-
-    /* margin-top: 20px; */
   }
   .total_company_container .companys {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
   }
   .total_company_container .companys li {

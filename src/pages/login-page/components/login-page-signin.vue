@@ -19,9 +19,7 @@
           <input type="checkbox" name="" id="" /> 아이디저장
         </div>
         <div class="join_members">
-          <button type="button" class="join_member" onClick="location.href=''">
-            회원가입
-          </button>
+          <router-link class="join_members_button" to="Join">회원가입</router-link>
         </div>
       </div>
       <div class="submit">
@@ -29,13 +27,13 @@
       </div>
       <div class="login_sns">
         <li class="sns_li">
-          <a href="">인스타<i class="fab fa-instagram"></i></a>
+          <a href="" class="instagram">Instagram<i class="fab fa-instagram"></i></a>
         </li>
         <li class="sns_li">
-          <a href="">페북<i class="fab fa-facebook-f"></i></a>
+          <a href="" class="facebook">Facebook<i class="fab fa-facebook-f"></i></a>
         </li>
         <li class="sns_li">
-          <a href="">트위터<i class="fab fa-twitter"></i></a>
+          <a href="" class="twitter">Twitter<i class="fab fa-twitter"></i></a>
         </li>
       </div>
     </div>
@@ -99,20 +97,34 @@ h2 {
   display: flex;
 }
 .login_sns li {
-  padding: 0px 20px;
+  padding: 0px 15px;
   list-style-type: none;
 }
-.login_sns a {
-  width: 50px;
-  height: 50px;
+.login_sns a{
+  width: 90px;
+  height: 25px;
+
+  background: white;
+  color: white;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 10px;
-  border-radius: 50px;
-  background: white;
+  border-radius: 10px;  
   font-size: 15px;
+  
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4), -3px -3px 5px rgba(0, 0, 0, 0.1);
+}
+.login_sns a.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+  .login_sns a.facebook {
+    background: #3b5998;
+  }
+.login_sns a.twitter {
+  background: rgb(29, 155, 240);
 }
 .login_id {
   margin-top: 20px;
@@ -143,6 +155,7 @@ h2 {
 .login_etc {
   padding: 10px;
   width: 80%;
+  margin-top: 10px;
   font-size: 14px;
   display: flex;
   justify-content: space-evenly;
@@ -156,6 +169,7 @@ h2 {
 .submit input {
   width: 100%;
   height: 50px;
+  margin: 8px 0;
   border: 0;
   outline: none;
   border-radius: 40px;
@@ -167,8 +181,12 @@ h2 {
 .join_members {
   flex: 0.4;
 }
-.join_member {
-  height: 40px;
-  width: 100px;
+.join_members_button {
+  display: inline-block;
+  height: 20px;
+  width: 90px;
+  border:1px solid #999;
+  border-radius: 5px;
+  padding: 10px;
 }
 </style>
