@@ -16,6 +16,17 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'com.google.firebase:firebase-admin:8.0.1'
+
+
+	// 스프링 시큐리티
+	implementation('org.springframework.boot:spring-boot-starter-security')
+	implementation ('org.springframework.boot:spring-boot-starter-oauth2-client')
+
+
+
+	// lombok
+	implementation('org.projectlombok:lombok')
+	annotationProcessor('org.projectlombok:lombok')
 }
 
 test {
