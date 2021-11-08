@@ -60,4 +60,4 @@ out/
 .vscode/
 
 ### DB Config ###
-/src/main/resources/serviceAccountKey.json
+/server/src/main/resources/serviceAccountKey.json
