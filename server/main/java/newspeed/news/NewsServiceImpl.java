@@ -26,7 +26,7 @@ public class NewsServiceImpl implements NewsService{
 		ApiFuture<QuerySnapshot> future = db.collection(NewsConst.COLLECTION_NAME).get();
 		List<QueryDocumentSnapshot> documents = future.get().getDocuments();
 		for (QueryDocumentSnapshot document : documents) {
-			// TODO: 2021-10-08 DB 객체에 추가하기 (현재 오류 발생)
+			// 게TODO: 2021-10-08 DB 객체에 추가하기 (현재 오류 발생)
 			// newsList.add(document.toObject(News.class));
 			System.out.println(document.getId());
 		}
