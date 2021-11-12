@@ -1,7 +1,10 @@
 package newspeed.news;
 
-import java.util.ArrayList;
+import static com.google.cloud.firestore.Query.*;
+
 import java.util.List;
+
+import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Service;
 
@@ -10,37 +13,55 @@ import com.google.cloud.firestore.Firestore;
 import com.google.cloud.firestore.QueryDocumentSnapshot;
 import com.google.cloud.firestore.QuerySnapshot;
 import com.google.firebase.cloud.FirestoreClient;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 @Service
 public class NewsServiceImpl implements NewsService{
 
-	@Override
-	public String insertNews(News news) throws Exception {
-		return null;
+	static Firestore db;
+
+	@PostConstruct
+	public void init() throws Exception {
+		db = FirestoreClient.getFirestore();
 	}
 
 	@Override
-	public List<News> getNewsAllList() throws Exception {
-		List<News> newsList = new ArrayList<>();
-		Firestore db = FirestoreClient.getFirestore();
+	public String getNewsAllList() throws Exception {
 		ApiFuture<QuerySnapshot> future = db.collection(NewsConst.COLLECTION_NAME).get();
 		List<QueryDocumentSnapshot> documents = future.get().getDocuments();
+		String jsonResult = makeJsonResult(documents);
+		return jsonResult;
+	}
+
+	@Override
+	public String getNewsInOrder(String order, String direction) throws Exception {
+		Direction selectDirection = direction.equals("asc") ? Direction.ASCENDING : Direction.DESCENDING;
+		ApiFuture<QuerySnapshot> future = db.collection(NewsConst.COLLECTION_NAME).orderBy(order, selectDirection).get();
+		List<QueryDocumentSnapshot> documents = future.get().getDocuments();
+		return makeJsonResult(documents);
+	}
+
+	@Override
+	public String getNewsWhere(String where, String keyword) throws Exception {
+		ApiFuture<QuerySnapshot> future = db.collection(NewsConst.COLLECTION_NAME).whereEqualTo(where, keyword).get();
+		List<QueryDocumentSnapshot> documents = future.get().getDocuments();
+		return makeJsonResult(documents);
+	}
+
+	private String makeJsonResult(List<QueryDocumentSnapshot> documents) {
+		JsonArray jsonArray = new JsonArray();
 		for (QueryDocumentSnapshot document : documents) {
-			// 게TODO: 2021-10-08 DB 객체에 추가하기 (현재 오류 발생)
-			// newsList.add(document.toObject(News.class));
-			System.out.println(document.getId());
+			News news = document.toObject(News.class);
+			news.setId(document.getId());
+			Gson gson = new Gson();
+			String jsonString = gson.toJson(news);
+			JsonParser parser = new JsonParser();
+			JsonObject jsonObject = (JsonObject)parser.parse(jsonString);
+			jsonArray.add(jsonObject);
 		}
-
-		return newsList;
-	}
-
-	@Override
-	public String updateNews(News news) throws Exception {
-		return null;
-	}
-
-	@Override
-	public String deleteNews(String id) throws Exception {
-		return null;
+		return jsonArray.toString();
 	}
 }

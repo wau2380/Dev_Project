@@ -1,15 +1,17 @@
 package newspeed.news;
 
-public class News {
-	private String id;
-	private String company;
-	private String date;
-	private String journal;
-	private String newsUrl;
-	private String photoUrl;
-	private String title;
+import java.util.ArrayList;
 
-	public News(String id, String company, String date, String journal, String newsUrl, String photoUrl,
+public class News {
+	private String id = "";
+	private String company = "";
+	private String date = "";
+	private String journal = "";
+	private String newsUrl = "";
+	private ArrayList<String> photoUrl = new ArrayList<>();
+	private String title = "";
+
+	public News(String id, String company, String date, String journal, String newsUrl, ArrayList<String> photoUrl,
 		String title) {
 		this.id = id;
 		this.company = company;
@@ -18,6 +20,10 @@ public class News {
 		this.newsUrl = newsUrl;
 		this.photoUrl = photoUrl;
 		this.title = title;
+	}
+
+	public News() {
+
 	}
 
 	public String getId() {
@@ -60,11 +66,11 @@ public class News {
 		this.newsUrl = newsUrl;
 	}
 
-	public String getPhotoUrl() {
+	public ArrayList<String> getPhotoUrl() {
 		return photoUrl;
 	}
 
-	public void setPhotoUrl(String photoUrl) {
+	public void setPhotoUrl(ArrayList<String> photoUrl) {
 		this.photoUrl = photoUrl;
 	}
 
@@ -74,5 +80,18 @@ public class News {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	@Override
+	public String toString() {
+		return "{" +
+			"id='" + id + '\'' +
+			", company='" + company + '\'' +
+			", date='" + date + '\'' +
+			", journal='" + journal + '\'' +
+			", newsUrl='" + newsUrl + '\'' +
+			", photoUrl=" + photoUrl +
+			", title='" + title + '\'' +
+			'}';
 	}
 }
