@@ -61,3 +61,7 @@ out/
 
 ### DB Config ###
 /src/main/resources/serviceAccountKey.json
+
+
+### Google config ###
+/src/main/resources/application-oauth.properties
