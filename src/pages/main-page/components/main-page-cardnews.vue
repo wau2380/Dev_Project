@@ -276,7 +276,7 @@ button,
   font-weight: 400;
   height: 2.85em;
   line-height: 2.95em;
-  padding: 0 1.5em;
+  padding: 0 2em;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
